@@ -23,7 +23,7 @@ class Div : Operator() {
         try {
             return x / y
         } catch (e: Exception) {
-            print("ERROR")
+            print("분모는 0이 될 수 없습니다")
             return 0.0
         }
     }
@@ -34,7 +34,7 @@ class Mod : Operator() {
         try {
             return x % y
         } catch (e: Exception) {
-            print("ERROR")
+            print("분모는 0이 될 수 없습니다")
             return 0.0
         }
     }
