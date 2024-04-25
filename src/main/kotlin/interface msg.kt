@@ -1,5 +1,5 @@
 package org.example
 
-abstract class Msg {
+interface Msg {
     abstract fun msg()
 }

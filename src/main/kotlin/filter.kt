@@ -10,7 +10,7 @@ class NumberFilter : Filter() {
         while (input == null) {
             val nm = NumMsg()
             nm.msg()
-            input = readln()?.toDoubleOrNull()
+            input = readln().toDoubleOrNull()
         }
         return input
     }
@@ -19,10 +19,10 @@ class NumberFilter : Filter() {
 class SymbolFilter : Filter() {
     override fun filter () : Char {
         var input: Char? = null
-        while (input == null || input != '+' || input != '-' || input != '*' || input != '/' || input != '%' ) {
+        while (input == null || input != '+' && input != '-' && input != '*' && input != '/' && input != '%' ) {
             val sm = SymMsg()
             sm.msg()
-            input = readln()?.firstOrNull()
+            input = readln().firstOrNull()
         }
         return input
     }
