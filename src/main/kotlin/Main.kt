@@ -1,39 +1,41 @@
 package org.example
 
 
-fun oper(z: Char, x: Double, y: Double) {
+fun oper(z: Char, x: Double, y: Double): Double {
     val Add = Add()
     val Sub = Sub()
     val Mul = Mul()
     val Div = Div()
     val Mod = Mod()
-    when (z) {
+    return when (z) {
         '+' -> Add.operate(x, y)
         '-' -> Sub.operate(x, y)
         '*' -> Mul.operate(x, y)
         '/' -> Div.operate(x, y)
         '%' -> Mod.operate(x, y)
+        else -> throw IllegalArgumentException("$z")
     }
 }
 
-    fun main() {
-        println("계산기입니다")
+fun main() {
+    val errorMsg = ErrorMsg()
+    val numfilt = NumberFilter()
+    val symfilt = SymbolFilter()
 
-        val errorMsg = ErrorMsg()
-        val numMsg = NumMsg()
-        val symMsg = SymMsg()
-        val numfilt = NumberFilter()
-        val symfilt = SymbolFilter()
+    println("계산기입니다")
 
-        numMsg.msg()
+    while (true) {
         var x = numfilt.filter()
-
-        symMsg.msg()
         var z = symfilt.filter()
-
-        numMsg.msg()
         var y: Double = numfilt.filter()
 
         val answer = oper(z, x, y)
-        println(answer)
+        println("답 : $answer ")
+
+        println("계속 계산하시려면 '1'을 종료하시려면 아무 키나 입력해 주세요")
+        val input: String = readln()
+        if (input != "1") {
+            break
+        }
     }
+}

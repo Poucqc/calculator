@@ -1,20 +1,20 @@
 package org.example
 
-class ErrorMsg : Msg() {
+class ErrorMsg : Msg {
     override fun msg() {
         println("Error : 입력을 확인해주세요")
     }
 }
 
-class NumMsg : Msg() {
+class NumMsg : Msg {
     override fun msg() {
-        println("숫자를 입력하세요")
+        print("숫자를 입력하세요 : ")
     }
 }
 
-class SymMsg : Msg() {
+class SymMsg : Msg {
     override fun msg() {
-        println("알맞은 기호를 입력하세요 ( + , - , * , / , % )")
+        print("알맞은 기호를 입력하세요 ( + , - , * , / , % ) : ")
     }
 }
 

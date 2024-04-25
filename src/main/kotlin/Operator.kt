@@ -20,22 +20,22 @@ class Mul : Operator() {
 
 class Div : Operator() {
     override fun operate(x: Double, y: Double): Double {
-        try {
-            return x / y
-        } catch (e: Exception) {
-            print("분모는 0이 될 수 없습니다")
+        if (y == 0.0) {
+            println("분모는 0이 될 수 없습니다")
             return 0.0
+        } else {
+            return x / y
         }
     }
 }
 
 class Mod : Operator() {
     override fun operate(x: Double, y: Double): Double {
-        try {
-            return x % y
-        } catch (e: Exception) {
-            print("분모는 0이 될 수 없습니다")
+        if (y == 0.0) {
+            println("분모는 0이 될 수 없습니다")
             return 0.0
+        } else {
+            return x % y
         }
     }
 }
