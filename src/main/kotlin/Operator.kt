@@ -21,6 +21,8 @@ class Mul : Operator() {
 class Div : Operator() {
     override fun operate(x: Double, y: Double): Double {
         if (y == 0.0) {
+            val em = ErrorMsg()
+            em.msg()
             println("분모는 0이 될 수 없습니다")
             return 0.0
         } else {
@@ -32,6 +34,8 @@ class Div : Operator() {
 class Mod : Operator() {
     override fun operate(x: Double, y: Double): Double {
         if (y == 0.0) {
+            val em = ErrorMsg()
+            em.msg()
             println("분모는 0이 될 수 없습니다")
             return 0.0
         } else {

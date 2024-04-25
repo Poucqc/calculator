@@ -19,11 +19,13 @@ class NumberFilter : Filter() {
 class SymbolFilter : Filter() {
     override fun filter () : Char {
         var input: Char? = null
+        val em = ErrorMsg()
         while (input == null || input != '+' && input != '-' && input != '*' && input != '/' && input != '%' ) {
             val sm = SymMsg()
             sm.msg()
             input = readln().firstOrNull()
         }
+        em.msg()
         return input
     }
 }
