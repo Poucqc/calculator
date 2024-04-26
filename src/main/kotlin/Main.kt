@@ -18,16 +18,15 @@ fun oper(z: Char, x: Double, y: Double): Double {
 }
 
 fun main() {
-    val errorMsg = ErrorMsg()
     val numfilt = NumberFilter()
     val symfilt = SymbolFilter()
 
     println("계산기입니다")
 
     while (true) {
-        var x = numfilt.filter()
-        var z = symfilt.filter()
-        var y: Double = numfilt.filter()
+        val x = numfilt.filter()
+        val z = symfilt.filter()
+        val y: Double = numfilt.filter()
 
         val answer = oper(z, x, y)
         println("답 : $answer ")

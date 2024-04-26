@@ -23,7 +23,7 @@ class Div : Operator() {
         if (y == 0.0) {
             val em = ErrorMsg()
             em.msg()
-            println("분모는 0이 될 수 없습니다")
+            print("분모는 0이 될 수 없습니다  ")
             return 0.0
         } else {
             return x / y
@@ -36,7 +36,7 @@ class Mod : Operator() {
         if (y == 0.0) {
             val em = ErrorMsg()
             em.msg()
-            println("분모는 0이 될 수 없습니다")
+            print("분모는 0이 될 수 없습니다  ")
             return 0.0
         } else {
             return x % y
